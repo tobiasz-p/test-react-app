@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {InputForm} from "./InputForm";
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function helloReact() {
   alert("hello react");
@@ -14,8 +17,9 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <InputForm defaultValue={'hello form'}/>
         <div>
-          <button onClick={helloReact}>say hello react</button>
+          <Button onClick={helloReact}>say hello react</Button>
         </div>
         <a
             className="App-link"
@@ -26,14 +30,7 @@ function App() {
           github.com/tobiasz-p
         </a>
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
     </div>
   );
