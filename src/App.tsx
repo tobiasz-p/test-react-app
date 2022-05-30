@@ -5,10 +5,6 @@ import {InputForm} from "./InputForm";
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function helloReact() {
-  alert("hello react");
-}
-
 function App() {
   return (
     <div className="App">
