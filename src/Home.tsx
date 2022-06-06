@@ -1,10 +1,18 @@
 import logo from "./logo.svg";
 import {InputForm} from "./InputForm";
 import Button from "react-bootstrap/Button";
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
 
 function helloReact() {
     alert("hello react");
+}
+
+async function todayActivity() {
+    const response = await axios.get(
+        `https://www.boredapi.com/api/activity`
+    );
+    alert(response.data.activity)
 }
 
 function Home(){
@@ -24,6 +32,10 @@ function Home(){
            >
                github.com/tobiasz-p
            </a>
+           <section>
+               <h2> Fetch task for today</h2>
+               <Button onClick={todayActivity}>I am bored 😑</Button>
+           </section>
        </div>
     )
 }
